@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto de página web</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <h2>Proyecto de página web</h2>
+  
+  <div class="container" id="container">
+    <!-- Crear usuario -->
+    <div class="form-container sign-up-container">
+      <form action="/register" method="POST">
+        <h1>Crear Cuenta</h1>
+        <span>Usa tu usuario y contraseña para registrarte</span>
+        <input type="text" name="usuario" placeholder="Usuario" required />
+        <input type="password" name="password" placeholder="Contraseña" required />
+        <input type="text" name="nombre" placeholder="Nombre completo" required />
+        <button type="submit">Crear Usuario</button>
+      </form>
+    </div>
+
+    <!-- Iniciar sesión -->
+    <div class="form-container sign-in-container">
+      <!-- ✅ Este formulario ahora redirige correctamente al menú -->
+      <form action="/login" method="POST">
+        <h1>Iniciar Sesión</h1>
+        <span>Introduce tu usuario y contraseña</span>
+        <input type="text" name="usuario" placeholder="Usuario" required />
+        <input type="password" name="password" placeholder="Contraseña" required />
+        <a href="#">¿Olvidaste tu contraseña?</a>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+
+    <!-- Panel lateral -->
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>¡Bienvenido de nuevo!</h1>
+          <p>Para mantenerte conectado, por favor inicia sesión con tu información personal</p>
+          <button class="ghost" id="signIn" type="button">Iniciar Sesión</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>¡Hola, Daniel!</h1>
+          <p>Ingresa tus datos personales y comienza tu viaje con nosotros</p>
+          <button class="ghost" id="signUp" type="button">Crear Usuario</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
